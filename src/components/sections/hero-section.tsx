@@ -5,7 +5,7 @@ import { SKILLS, START_DATE_EXPERIENCE, SOCIAL_LINKS } from "@/constants";
 import useYearsOfExperience from "@/hooks/use-years-of-experience";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown, Download, Code2 } from "lucide-react"; // Added Code2 here
+import { ArrowDown, Download, Code2 } from "lucide-react";
 import RevealOnScroll from "@/components/motion/reveal-on-scroll";
 
 const HeroSection = () => {
@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-gradient-to-br from-background to-secondary/30 py-16 md:py-24"
+      className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-gradient-to-br from-background to-secondary/30 dark:from-indigo-950 dark:to-neutral-900 py-16 md:py-24"
     >
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 text-center md:grid-cols-2 md:px-6 md:text-left">
         <div className="space-y-6">
