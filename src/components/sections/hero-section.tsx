@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -14,7 +15,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-gradient-to-br from-background to-secondary/30 dark:from-indigo-950 dark:to-neutral-900 py-16 md:py-24"
+      className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-gradient-to-br from-background to-secondary/30 dark:from-black dark:to-neutral-900 py-16 md:py-24"
     >
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 text-center md:grid-cols-2 md:px-6 md:text-left">
         <div className="space-y-6">
