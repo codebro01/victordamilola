@@ -5,7 +5,7 @@ import { SKILLS, START_DATE_EXPERIENCE, SOCIAL_LINKS } from "@/constants";
 import useYearsOfExperience from "@/hooks/use-years-of-experience";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, Download, Code2 } from "lucide-react"; // Added Code2 here
 import RevealOnScroll from "@/components/motion/reveal-on-scroll";
 
 const HeroSection = () => {
