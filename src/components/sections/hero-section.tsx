@@ -26,7 +26,7 @@ const HeroSection = () => {
           </RevealOnScroll>
           <RevealOnScroll animationClass="animate-fade-in-up" delayClass="animation-delay-200">
             <p className="text-xl text-foreground/80 md:text-2xl">
-              JavaScript Developer
+              Typescript Developer
               {yearsOfExperience !== null && ` | ${yearsOfExperience}+ Years of Experience`}
             </p>
           </RevealOnScroll>
@@ -37,10 +37,10 @@ const HeroSection = () => {
           </RevealOnScroll>
           <RevealOnScroll animationClass="animate-fade-in-up" delayClass="animation-delay-600">
             <div className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start">
-              {SKILLS.slice(0, 5).map((skill) => ( // Show first 5 prominent skills
+              {SKILLS.slice(0, 11).map((skill) => ( // Show first 5 prominent skills
                 <span
                   key={skill}
-                  className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary"
+                  className="rounded-full bg-primary/10 dark:bg-primary/50 px-3 py-1 text-sm font-medium text-primary dark:text-gray-300"
                 >
                   {skill}
                 </span>
@@ -49,11 +49,11 @@ const HeroSection = () => {
           </RevealOnScroll>
           <RevealOnScroll animationClass="animate-fade-in-up" delayClass="animation-delay-600">
              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+             <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <Link href="#contact">Get in Touch</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="/victor-damilola-resume.pdf" download> {/* Replace with actual resume path */}
+                <a href="/Victor Damilola CV.pdf" download> {/* Replace with actual resume path */}
                   Download CV <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -73,7 +73,7 @@ const HeroSection = () => {
         <RevealOnScroll animationClass="animate-fade-in" delayClass="animation-delay-400" className="hidden md:block">
           <div className="relative mx-auto h-80 w-80 lg:h-96 lg:w-96">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="/img/vd.jpg"
               alt="Victor Damilola Portrait"
               width={400}
               height={400}

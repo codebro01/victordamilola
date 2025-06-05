@@ -3,7 +3,7 @@
 import { ACCOMPLISHMENTS_DATA } from "@/constants";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import RevealOnScroll from "@/components/motion/reveal-on-scroll";
-import { Award, Zap, Mic } from "lucide-react"; // Example icons
+import { Award, Zap, Mic, Database, BrainCog } from "lucide-react"; // Example icons
 
 // Helper to get an icon component based on a string name
 const getIcon = (iconName?: string) => {
@@ -14,6 +14,10 @@ const getIcon = (iconName?: string) => {
       return <Zap className="h-8 w-8 text-primary" />;
     case "Mic":
       return <Mic className="h-8 w-8 text-primary" />;
+    case "BrainCog":
+      return <BrainCog className="h-8 w-8 text-primary" />;
+    case "Database":
+      return <Database className="h-8 w-8 text-primary" />;
     default: // A generic icon if no match
       return <Award className="h-8 w-8 text-primary" />; 
   }

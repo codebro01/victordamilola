@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import RevealOnScroll from "@/components/motion/reveal-on-scroll";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -35,14 +36,38 @@ const ContactSection = () => {
 
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Form data:", data);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-      variant: "default", 
-    });
-    reset();
+    // console.log(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+    try {
+      // Initialize EmailJS with your Public Key
+      emailjs.init(`${process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY}`); // Replace with your EmailJS Public Key
+
+      // Send email using EmailJS
+      console.log(process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID)
+      await emailjs.send(
+        `${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`, // Replace with your EmailJS Service ID
+        `${process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}`, // Replace with your EmailJS Service ID
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+        }
+      );
+
+      // console.log('Form data:', data);
+      toast({
+        title: 'Message Sent!',
+        description: 'Thanks for reaching out. I’ll get back to you soon.',
+        variant: 'default',
+      });
+      reset();
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again later.',
+        variant: 'destructive',
+      });
+    }
   };
 
   return (
@@ -67,7 +92,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <a href="mailto:victor.damilola@example.com" className="text-foreground/80 hover:text-primary break-all">
-                      victor.damilola@example.com
+                      samsondamilola.99@gmail.com
                     </a>
                   </div>
                 </div>
@@ -75,21 +100,21 @@ const ContactSection = () => {
                   <Phone className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                    <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-foreground/80">(Placeholder) +123 456 7890</p>
+                    <p className="text-foreground/80">(+234) 9137961346</p>
                   </div>
                 </div>
                  <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                    <div>
                     <h4 className="font-semibold">Location</h4>
-                    <p className="text-foreground/80">Lagos, Nigeria (Remote Work Available)</p>
+                    <p className="text-foreground/80">Kogi, Nigeria (Remote Work Available)</p>
                   </div>
                 </div>
               </div>
               <div className="mt-6 border-t pt-6">
                 <h4 className="font-semibold mb-2 text-primary">Connect with me</h4>
                 <div className="flex space-x-3">
-                  {SOCIAL_LINKS.filter(link => link.label !== "Email").map((link) => (
+                  {SOCIAL_LINKS.map((link) => (
                     <Link key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
                       <Button variant="outline" size="icon" className="border-primary/50 text-primary hover:bg-primary/10">
                          <link.icon className="h-5 w-5" />

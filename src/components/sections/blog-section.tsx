@@ -35,7 +35,8 @@ const BlogSection = () => {
                   </div>
                   <p className="text-sm text-muted-foreground">{post.date}</p>
                   <CardTitle className="font-headline text-xl text-primary hover:underline">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    {/* <Link href={`/blog/${post.slug}`}>{post.title}</Link> */}
+                    <Link href={`${post.slug}`} target="_blank">{post.title}</Link>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">

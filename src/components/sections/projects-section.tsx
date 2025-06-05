@@ -37,7 +37,7 @@ const ProjectsSection = () => {
                   <CardTitle className="font-headline text-xl text-primary">{project.title}</CardTitle>
                   <div className="flex flex-wrap gap-2 pt-1">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs bg-accent/20 text-accent-foreground hover:bg-accent/30">{tag}</Badge>
+                      <Badge key={tag} variant="secondary" className="text-xs bg-accent/20 text-accent-foreground hover:bg-accent/30 dark:bg-accent/50 dark:text-gray-300">{tag}</Badge>
                     ))}
                   </div>
                 </CardHeader>
