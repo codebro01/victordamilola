@@ -75,11 +75,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Victor Damilola – Web Developer in Nigeria',
     description: 'Hire a reliable, modern fullstack developer in Nigeria. View the portfolio of Victor Damilola.',
-    url: 'https://victordamilola.dev',
+    url: 'https://www.victordamilola.vercel.app',
     siteName: 'Victor Damilola Portfolio',
     images: [
       {
-        url: 'https://victordamilola.dev/og-image.png', // you should create a custom banner image
+        url: 'https://www.victordamilola.vercel.app/img/vd.jpg', // you should create a custom banner image
         width: 1200,
         height: 630,
         alt: 'Victor Damilola – JavaScript Developer',
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     title: 'Victor Damilola – JavaScript Developer Portfolio',
     description: 'Typescript | React | Next.js | Node.js developer from Nigeria – modern, clean, efficient.',
     creator: '@victordamilola',
-    images: ['https://victordamilola.dev/og-image.png'],
+    images: ['https://www.victordamilola.vercel.app/img/vd.jpg'],
   }
 
 };
