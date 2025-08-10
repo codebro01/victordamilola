@@ -26,7 +26,7 @@ const HeroSection = () => {
           </RevealOnScroll>
           <RevealOnScroll animationClass="animate-fade-in-up" delayClass="animation-delay-200">
             <p className="text-xl text-foreground/80 md:text-2xl">
-              Typescript Developer
+              Fullstack Developer
               {yearsOfExperience !== null && ` | ${yearsOfExperience}+ Years of Experience`}
             </p>
           </RevealOnScroll>

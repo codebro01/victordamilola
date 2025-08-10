@@ -10,7 +10,7 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = [
-  "Typescript", "JavaScript", "React", "Next.js", "Node.js", "Express.js", 
+  "Typescript", "JavaScript", "React", "Next.js", "Node.js", "NestJS",  "Express.js", 
   "MongoDB", "PostgreSQL", "GraphQL", "REST APIs", "Tailwind CSS", "Mailchimp API"
 ];
 

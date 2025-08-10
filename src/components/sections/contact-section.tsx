@@ -35,10 +35,12 @@ const ContactSection = () => {
   });
 
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
+    console.log(data)
     // Simulate API call
     // console.log(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
     try {
       // Initialize EmailJS with your Public Key
+
       emailjs.init(`${process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY}`); // Replace with your EmailJS Public Key
 
       // Send email using EmailJS
@@ -49,6 +51,7 @@ const ContactSection = () => {
         {
           from_name: data.name,
           from_email: data.email,
+          subject: data.subject, 
           message: data.message,
         }
       );
