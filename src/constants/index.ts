@@ -31,6 +31,26 @@ export const SOCIAL_LINKS = [
 
 export const PROJECTS_DATA = [
   {
+    title: 'Property Rentals Company',
+    description:
+      'A Property Rentals Company with features such as cart functionalities, checkout, filter, maps, etc',
+    image: '/img/carracomo.png',
+    tags: ['Wordpress', 'WP Rentals', 'Paystack', 'Woo-commerce'],
+    liveLink: 'https://caraccomo.com/',
+    repoLink: 'https://caraccomo.com/',
+    aiHint: 'Property Rentals Company',
+  },
+  {
+    title: 'Web Development Agency',
+    description:
+      'A web agency company that design and develop website for both local and global businesses.',
+    image: '/img/web-launchers.png',
+    tags: ['Typescript', 'Next.js', 'PostgreSQL', 'Flutterwave'],
+    liveLink: 'https://weblaunchers.com.ng',
+    repoLink: 'https://github.com/codebro01/The-launchers-team',
+    aiHint: 'Web Agency',
+  },
+  {
     title: 'E-commerce Platform',
     description:
       'A full-stack e-commerce application with features like product listings, cart, checkout, and user authentication.',
@@ -45,7 +65,16 @@ export const PROJECTS_DATA = [
     description:
       'An automated system for managing poultry farms, enabling real-time monitoring and control of feeding, lighting, and climate conditions.',
     image: '/img/pms.jpg',
-    tags: ['Node.js', 'Python', 'React JS', 'Mongodb', 'Graphql', "Rest API", 'Cloudinary', 'Auth'],
+    tags: [
+      'Node.js',
+      'Python',
+      'React JS',
+      'Mongodb',
+      'Graphql',
+      'Rest API',
+      'Cloudinary',
+      'Auth',
+    ],
     liveLink: 'https://poultry-management-system-ten.vercel.app/',
     repoLink: 'https://github.com/codebro01/poultry-management-system.git',
     aiHint: 'poultry farm automation',
